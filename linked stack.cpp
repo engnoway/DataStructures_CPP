@@ -11,7 +11,7 @@ class stack{
    Node* top,*current;
   
    
-   public:n
+   public:
     stack(){
        top=current=NULL;
    }
@@ -58,7 +58,7 @@ class stack{
 };
 int main()
 {
-    //_stack<float> st;
+ 
     stack st;
     int x=0;
     st.push (5);
