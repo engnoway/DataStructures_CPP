@@ -2,55 +2,71 @@
 
 using namespace std;
 
-class stack{
+class stack
+{
    private:
+   
    struct Node{
       int element;
       Node* Next;
    };
+   
    Node* top,*current;
-  
    
    public:
-    stack(){
+   
+stack()
+    {
        top=current=NULL;
-   }
-   void push(int val){
+    }
+   
+void push(int val)
+  {
        Node*newElement=new Node;
-       if(newElement==NULL){
+       if(newElement==NULL)
+       {
            cout<<"failed to allocate memory"<<endl;
-       }else{
+       }
+   
+   else{
        newElement->element=val;
        newElement->Next=top;
-       top=newElement;}
-   }
+       top=newElement;
+       }
+  }
    
-   void pop(){
-       if(top==NULL){
+   void pop()
+   {
+       if(top==NULL)
+       {
                     cout<<"empty _stack"<<endl;
-  
-       }else{
+       }
+      else
+      {
        Node*temp=top;
        top=top->Next;
       temp= temp->Next=NULL;
        delete temp;
-       //return top;
-       }
-       
+       }   
    }
    
-   void GetTop(int&topElement){
-       if(top==NULL){
+   void GetTop(int&topElement)
+   {
+       if(top==NULL)
+       {
                     cout<<"empty _stack"<<endl;
   
-       }else{
+       }else
+       {
            topElement=top->element;
        }
    }
    
-   void Display(){
+   void Display()
+   {
        current=top;
-       while(current!=NULL){
+       while(current!=NULL)
+       {
            cout<<current->element<<endl;
            current=current->Next;
        }
